@@ -38,7 +38,7 @@
     transition: .5s all;
 }
 
-.principal{
+.main{
     display: block;
     position: relative;
     padding: 3rem;
@@ -75,13 +75,13 @@
     transition: all .5s;
 }
 
-.paragraphPrincipal{
+.paragraph-main{
     margin-bottom: 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
 }
 
-.productBackground {
+.product-background {
     position: absolute;
     right: 10%;
     bottom: -30%;
@@ -92,7 +92,7 @@
     transform: rotate(30deg);
 }
 
-.productBackgroundLeft{
+.product-background-left{
     position: absolute;
     top: -25%;
     right: auto;
@@ -104,7 +104,7 @@
     border-radius: 21px;
 }
 
-.productBackground::before {
+.product-background::before {
     content: "";
     position: absolute;
     top: 10%;
@@ -115,7 +115,7 @@
     border-radius: 5px;
 }
 
-.productBackgroundLeft::before {
+.product-background-left::before {
     content: "";
     position: absolute;
     top: 10%;
@@ -126,9 +126,10 @@
     border-radius: 5px;
 }
 
-.containerCard{
+.container-card{
     width: 100%;
     display: flex;  
+    flex-wrap: nowrap;
     padding: 0 0 0 1rem;
     margin: 1rem 0;
 }
@@ -148,7 +149,7 @@
     font-weight: 300;
 }
 
-.cardParagraph {
+.card-paragraph {
     font-size:1.25rem;
     font-weight: 300;
     margin: 0 0 1rem 0;
@@ -192,7 +193,7 @@
     width: 100%;    
 }
 
-.cFooter {
+.c-footer {
     max-width: 960px;
     padding: 3rem .75rem 3rem .75rem;
     display: flex;
@@ -200,11 +201,11 @@
     margin: 0 auto;
 }
 
-.sectionFooter {
+.section-footer {
     width: 20%;
     line-height: 1.5;
 }
-.tittleFooter {
+.tittle-footer {
     font-size: 1.25rem;
     margin: 0 0 .25rem 0;
     color:rgba(0, 0, 0, 1);
@@ -222,4 +223,69 @@
 .small {
     display: block;
     color: #6c757d;
+}
+
+
+@media only screen and (max-width: 768px){
+    .card {
+        width: 100%;
+    }
+
+    .container-card {
+        flex-wrap: wrap;
+    }
+
+    .product-background {
+        display: none;
+    }
+
+    .product-background-left {
+        display: none;
+    }
+
+    .main {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .message {
+        padding: 0;
+        margin: 3rem auto;
+        width: 100%;
+    }
+
+    .tittle {
+        font-size: calc(1.475rem + 2.7vw);
+    }
+
+    .none {
+        display: none;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .section-footer {
+        width: 50%;
+    }
+
+    .date {
+        width: 100%;
+    }
+    .c-footer {
+        flex-wrap: wrap;
+    }
+
+    .small {
+        margin: 0 0 1rem 0;
+    }
+
+    .d-block {
+        margin: 0 0 .5rem 0;
+    }
+
+    .subtittle {
+        font-size: calc(1.425rem + 2.1vw);
+    }
 }
